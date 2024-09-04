@@ -5,22 +5,22 @@
     <title>Case 03</title>
 </head>
 <style>
-    section {
-        background: purple;
-        width: 200px;
-        height: 200px;
-        border-radius: 75%;
+    section>#first {
+        background: white;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
         align-items: center;
-        border: 50px solid gray;
+        border: 20px solid gray;
         left: 0;
         top: 0;
         right: 0;
         bottom: 0;
         margin: auto;
-        position: absolute;
+        position: fixed;
     }
-    section>div>div{
-        border: 50px solid red;
+    section>#first>#second{
+        border: 20px solid red;
         border-radius: 100%;
         align-items: center;
         left: 0;
@@ -30,21 +30,67 @@
         margin: auto;
         position: absolute;
     }
-    section>div>div>h1{
-        text-align: center;
-        left: 25px;
-        top: 35px;
-        margin: auto;
+    section:nth-child(2){
         position: absolute;
-        color: black;
+        width: fit-content;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
+    section:nth-child(2)>div{
+        position: relative;
+        width: 260px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        margin: 620px 0px;
+    }
+    section:nth-child(2)>div:first-child{
+        background: purple;
+    }
+    section:nth-child(2)>div:nth-child(2){
+        background: blue;
+    }
+    section:nth-child(2)>div:nth-child(3){
+        background: orange;
+    }
+    section:nth-child(2)>div>span{
+        position: absolute;
+        text-align: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+        font-style: normal;
+    }
+
 </style>
 <body>
 <section>
-    <div>
-        <div>
-            <h1>Hello</h1>
+    <div id="first">
+        <div id="second">
         </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <span>Hello</span>
+    </div>
+
+    <div>
+        <span>welcome to</span>
+    </div>
+
+    <div>
+        <span>
+        Institute<br>
+        of<br>
+        software<br>
+        Engineering
+        </span>
     </div>
 </section>
 </body>
